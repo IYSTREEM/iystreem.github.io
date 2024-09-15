@@ -54,7 +54,7 @@ body::-webkit-scrollbar {
 }
 
 .header {
-	background-image: url("bg.jpg");
+	background-image: url("bg.webp");
 	/* background: linear-gradient(135deg, #6a0dad 0%, #041b27 100%); */
 	height: 90vh;
 	display: flex;
@@ -554,7 +554,7 @@ body::-webkit-scrollbar {
 }
 
 #section3 {
-	background-image: url('bg4p.jpg');
+	background-image: url('bg4p.webp');
 	/* Assuming you wanted the third image to be different */
 }
 
