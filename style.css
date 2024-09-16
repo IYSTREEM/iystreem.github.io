@@ -86,31 +86,10 @@ body {
 	width: 650px;
 	height: 500px;
 	}
-	.stats {
-	background-color: #38218ae3;
-	padding: 20px;
-	border-radius: 50px;
-	margin: -50px auto -50px;
-	max-width: 80%;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	z-index: 999;
-	position: relative;
-	width: 50%;
+	#btna.btn {
+		margin-left: 20px;
 	}
-	.stats .stat {
-	text-align: center;
-	opacity: 100%;
-	}
-	.stats .stat h3 {
-	font-size: 24px;
-	margin: 0;
-	}
-	.stats .stat p {
-	font-size: 16px;
-	margin: 5px 0 0;
-	}
+
 	.divider {
 	height: 60px;
 	width: 2px;
@@ -211,11 +190,7 @@ body {
 	font-size: 14px;
 	color: #666;
 	}
-	@media (min-width: 768px) {
-	.container {
-	grid-template-columns: repeat(3, 1fr);
-	}
-	}
+
 	.reviews {
 	background-color: rgba(0, 0, 0, 0.2);
 	padding: 50px 20px;
@@ -343,16 +318,9 @@ body {
 	margin: 0 auto;
 	gap: 20px;
 	}
-	@media (max-width: 768px) {
-	.content {
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	}
 	.content .text {
 	margin-left: 0;
 	margin-top: 20px;
-	}
 	}
 	.content img {
 	width: 100%;
@@ -389,17 +357,12 @@ body {
 	margin-right: 15px;
 	text-decoration: none;
 	}
-	@media (max-width: 768px) {
-	.content {
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	}
+
 	.content .text {
 	margin-left: 0;
 	margin-top: 20px;
 	}
-	}
+	
 	.github-section {
 	background-color: rgba(0, 0, 0, 0.2);
 	padding: 50px 20px;
@@ -883,31 +846,106 @@ body {
 	flex-wrap: wrap;
 	}
 	@media (max-width: 768px) {
-	.header h1 {
-	font-size: 36px;
+		body {
+			-webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
+			overflow: hidden; /* Prevents bounce back */
+		}
+
+		html, body {
+			overflow-x: hidden;
+			scroll-behavior: smooth;
+		}
+
+		.header img {
+			opacity: 0;
+		}
+
+		 .btn {
+			display: block; /* Ensure it's block to take full width */
+			width: 100%;    /* Make the button take up the full width */ /* Add space above the button */
+			margin-bottom: 20px; /* Add space below the button */
+			text-align: center;
+		}
+
+		#btna.btn {
+			margin: 0;
+		}
+
+		.content {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+		.stats {
+			width: 400px;
+			}
+
+		.github-section {
+			background-color: rgba(0, 0, 0, 0.2);
+			padding: 50px 20px;
+			border-radius: 10px;
+			margin: 20px auto;
+			max-width: 80%;
+			text-align: center;
+			}
+		.github-repo-container {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			overflow-y: hidden;
+		}
+		.github-repo {
+			width: 300px;
 	}
-	.header .profile-picture img {
-	max-width: 90%;
-	}
-	.navbar {
-	flex-direction: column;
-	padding: 10px 20px;
-	}
-	.navbar a {
-	margin: 10px 0;
-	font-size: 14px;
-	}
-	.stats {
-	flex-direction: column;
-	padding: 10px;
-	width: 100%;
-	}
-	.features,
-	.reviews {
-	flex-direction: column;
-	max-width: 90%;
-	}
-	.header {
-	flex-direction: column;
-	}
-	}
+
+	.skills {
+		width: 80%;
+		margin: 60px auto;
+		border-radius: 10px;
+		background-color: rgba(0, 0, 0, 0.2);
+		padding: 20px;
+		flex-direction: column
+	
+		}
+		.skills h1 {
+		text-align: center;
+		margin-bottom: 30px;
+		color: #d4a5ff;
+		}
+		.skills h6 {
+			text-align: center;
+			margin-bottom: 90px;
+		}
+		.skills ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		overflow-y: hidden;
+		}
+		.skills li {
+		padding: 20px;
+		background: rgb(36, 33, 33);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		overflow-y: hidden;
+		}
+		.skills li h3 {
+		margin: 0;
+		font-size: 18px;
+		color: #ffffff;
+		text-align: left;
+		}
+
+
+
+
+
+}
