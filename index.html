@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="navbar">
-      <div class="logo"></div>
+      <div class="logo"><p>IYSTREEM</p></div>
       <div class="nav-links">
         <a href="#">Home</a>
         <a href="https://www.fiverr.com/iystreem" target="_blank">Fiverr</a>
@@ -19,6 +19,11 @@
         <a href="#">Projects</a>
       </div>
       <a href="#" class="invite" style="margin-right: 60px; border-color: #6942f500;"></a>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+     </div>
     </div>
     <div class="header section" style="padding-left: 10%; padding-right: 8%;" id="home">
       <div class="text">
@@ -475,6 +480,12 @@ function updateTimeline(timelineItems, currentIndex) {
     item.classList.toggle('active', index <= currentIndex || (currentIndex === 2 && index === timelineItems.length - 1));
   });
 }
+
+document.querySelector(".hamburger").addEventListener("click", () => {
+   document.querySelector(".navbar").classList.toggle("active");
+});
+
+
 
 // Throttle function to limit the rate of function execution
 function throttle(func, limit) {

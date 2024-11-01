@@ -8,32 +8,7 @@ body {
 	body::-webkit-scrollbar {
 	display: none;
 	}
-	.navbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px 40px;
-	background-color: rgba(0, 0, 0, 0.3);
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 1000;
-	}
-	.navbar a {
-	color: white;
-	text-decoration: none;
-	margin: 0 15px;
-	font-size: 16px;
-	}
-	.navbar .logo {
-	font-size: 20px;
-	font-weight: bold;
-	}
-	.navbar .invite {
-	border: 1px solid white;
-	padding: 10px 20px;
-	border-radius: 20px;
-	}
+
 	.section {
 	padding: 100px 0px;
 	opacity: 1;
@@ -754,31 +729,83 @@ body {
 	display: none;
 	}
 	.navbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px 40px;
-	background-color: rgba(0, 0, 0, 0.3);
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 1000;
-	}
-	.navbar a {
-	color: white;
-	text-decoration: none;
-	margin: 0 15px;
-	font-size: 16px;
-	}
-	.navbar .logo {
-	font-size: 20px;
-	font-weight: bold;
-	}
-	.navbar .invite {
-	border: 1px solid white;
-	padding: 10px 20px;
-	border-radius: 20px;
-	}
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 40px;
+		background-color: rgba(0, 0, 0, 0.3);
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 1000;
+	 }
+	 
+	 .navbar a {
+		color: white;
+		text-decoration: none;
+		margin: 0 15px;
+		font-size: 16px;
+	 }
+	 
+	 .navbar .logo {
+		font-size: 20px;
+		font-weight: bold;
+	 }
+	 
+	 .navbar .invite {
+		border: 1px solid white;
+		padding: 10px 20px;
+		border-radius: 20px;
+	 }
+	 
+	 /* Hide hamburger by default and display on mobile */
+	 .hamburger {
+		display: none;
+		flex-direction: column;
+		cursor: pointer;
+		margin-right: 40px;
+	 }
+	 
+	 .hamburger span {
+		background-color: white;
+		height: 2px;
+		width: 25px;
+		margin: 4px;
+	 }
+	 
+	 /* Responsive Styles */
+	 @media (max-width: 768px) {
+		.nav-links {
+		   display: none; /* Hide links on mobile */
+		   flex-direction: column;
+		   position: absolute;
+		   top: 60px;
+		   right: 0;
+		   background-color: rgba(0, 0, 0, 0.9);
+		   width: 100%;
+		   padding: 1em;
+		}
+	 
+		.nav-links a {
+		   margin: 15px 0;
+		   text-align: center;
+		}
+	 
+		.invite {
+		   margin: 20px auto;
+		   text-align: center;
+		}
+	 
+		.hamburger {
+		   display: flex; /* Show hamburger icon on mobile */
+		}
+	 
+		/* Show links when navbar is active */
+		.navbar.active .nav-links {
+		   display: flex;
+		}
+	 }
+	 
 	.header {
 	background-image: url("bg.webp");
 	height: 90vh;
