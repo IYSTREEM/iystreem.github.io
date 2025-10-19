@@ -19,10 +19,11 @@ body {
 	}
 	.header {
 	background-image: url("bg.webp");
+	 display: flex;
+	background-size: cover;
 	height: 90vh;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 	position: relative;
 	padding-top: 0px;
 	padding-bottom: 0px	;
@@ -31,8 +32,9 @@ body {
 	margin-bottom: 50px;
 	}
 	.header .text {
-	max-width: 50%;
-	text-align: left;
+	align-items: center;
+	max-width: 100%;
+	text-align: center;
 	}
 	.header h1 {
 	font-size: 48px;
@@ -57,6 +59,14 @@ body {
 	max-width: 50%;
 	text-align: right;
 	}
+	.header.section {
+  display: flex;
+  justify-content: center;  /* centers horizontally */
+  align-items: center;      /* centers vertically */
+  height: 100vh;            /* make header full height */
+  text-align: center;       /* center text inside */
+  flex-direction: column;   /* stack items vertically */
+}
 	.header .profile-picture img {
 	width: 650px;
 	height: 500px;
@@ -732,7 +742,7 @@ body {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 20px 40px;
+		padding: 10px 40px;
 		background-color: rgba(0, 0, 0, 0.3);
 		position: fixed;
 		top: 0;
@@ -748,6 +758,7 @@ body {
 	 }
 	 
 	 .navbar .logo {
+		padding-left: 3%;
 		font-size: 20px;
 		font-weight: bold;
 	 }
@@ -808,7 +819,7 @@ body {
 	 
 	.header {
 	background-image: url("bg.webp");
-	height: 90vh;
+	height: 100vh;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
